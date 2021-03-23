@@ -1,16 +1,17 @@
 {
     "name": "sunnysideup/yes-no-any-filter",
     "type": "silverstripe-vendormodule",
-    "description": "Dev Module for intelligent Debugging",
+    "description": "Fix for broken boolean search in Silverstripe ORM",
     "keywords": [
         "Silverstripe-CMS",
         "CMS",
         "Silverstripe",
-        "debug",
-        "var_dump",
-        "print_r",
-        "debugging",
-        "output"
+        "Boolean",
+        "search",
+        "searchable_fields",
+        "Any",
+        "scaffoldSearchFields",
+        "scaffoldSearchField"
     ],
     "license": "BSD-3-Clause",
     "authors": [
