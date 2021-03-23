@@ -12,7 +12,7 @@ trait FixBooleanSearch
 
         $anyText = _t('SilverStripe\\ORM\\FieldType\\DBBoolean.ANY', '-- Any --');
         $source = [
-            null => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.ANY', '-- Any --'),
+            null => ' -- any -- ',
             1 => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.YESANSWER', 'Yes'),
             0 => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.NOANSWER', 'No'),
         ];
@@ -24,8 +24,9 @@ trait FixBooleanSearch
                 $type = $dbs[$fieldName] ?? 'error';
                 if (stripos($type, 'Boolean') === 0) {
                     $field = new DropdownField($fieldName, $fieldTitle, $source);
-                    $field->setEmptyString($anyText);
-                    $fields->replaceField($fieldName, $field);
+                    $fields
+                        ->dataFieldByName($fieldName)
+                        ->setSource($source);
                 }
             }
         }
