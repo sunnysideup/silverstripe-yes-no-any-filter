@@ -1,0 +1,7 @@
+---
+Name: yes_no_any_filter
+---
+
+SilverStripe\ORM\FieldType\DBBoolean:
+  extensions:
+    - Sunnysideup\YesNoAnyFilter\DBBooleanColourfull

@@ -11,7 +11,9 @@
         "searchable_fields",
         "Any",
         "scaffoldSearchFields",
-        "scaffoldSearchField"
+        "scaffoldSearchField",
+        "Colourfull",
+        "Yes/No"
     ],
     "license": "BSD-3-Clause",
     "authors": [
