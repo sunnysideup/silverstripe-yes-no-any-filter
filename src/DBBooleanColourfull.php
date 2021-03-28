@@ -8,14 +8,29 @@ use SilverStripe\ORM\FieldType\DBField;
 class DBBooleanColourfull extends Extension
 {
     //colours from CMS
+    /**
+     * @var string
+     */
     private const BAD_COLOUR = '#da273b';
 
+    /**
+     * @var string
+     */
     private const GOOD_COLOUR = '#008a00';
 
+    /**
+     * @var string
+     */
     private const YES_VALUE = 'Yes';
 
+    /**
+     * @var string
+     */
     private const NO_VALUE = 'No';
 
+    /**
+     * @var string
+     */
     private const STYLE = 'color: #fff; text-align: center; text-transform: uppercase; font-weight: bold; border-radius: 10px; max-width: 4em;';
 
     private static $casting = [
@@ -36,18 +51,10 @@ class DBBooleanColourfull extends Extension
     protected function NiceAndColourfullInner(?bool $invertColours = false)
     {
         if ($this->owner->value) {
-            if ($invertColours) {
-                $bgColour = self::BAD_COLOUR;
-            } else {
-                $bgColour = self::GOOD_COLOUR;
-            }
+            $bgColour = $invertColours ? self::BAD_COLOUR : self::GOOD_COLOUR;
             $text = self::YES_VALUE;
         } else {
-            if ($invertColours) {
-                $bgColour = self::GOOD_COLOUR;
-            } else {
-                $bgColour = self::BAD_COLOUR;
-            }
+            $bgColour = $invertColours ? self::GOOD_COLOUR : self::BAD_COLOUR;
             $text = self::NO_VALUE;
         }
         return DBField::create_field('HTMLFragment', '<div style="background-color: ' . $bgColour . '; ' . self::STYLE . ' ">' . $text . '</div>');

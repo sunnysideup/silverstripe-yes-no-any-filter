@@ -14,7 +14,7 @@ trait FixBooleanSearch
             0 => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.NOANSWER', 'No'),
         ];
         $searchableFields = $this->searchableFields();
-        if (count($searchableFields)) {
+        if (count($searchableFields) > 0) {
             $dbs = $this->Config()->get('db');
             foreach (array_keys($searchableFields) as $fieldName) {
                 $type = $dbs[$fieldName] ?? 'error';
