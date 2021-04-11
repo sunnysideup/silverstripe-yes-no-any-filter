@@ -57,6 +57,7 @@ class DBBooleanColourfull extends Extension
             $bgColour = $invertColours ? self::GOOD_COLOUR : self::BAD_COLOUR;
             $text = self::NO_VALUE;
         }
+
         return DBField::create_field('HTMLFragment', '<div style="background-color: ' . $bgColour . '; ' . self::STYLE . ' ">' . $text . '</div>');
     }
 }

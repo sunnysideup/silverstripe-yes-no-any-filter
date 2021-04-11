@@ -18,10 +18,11 @@ trait FixBooleanSearch
             $dbs = $this->Config()->get('db');
             foreach (array_keys($searchableFields) as $fieldName) {
                 $type = $dbs[$fieldName] ?? 'error';
-                if (stripos($type, 'Boolean') === 0) {
+                if (0 === stripos($type, 'Boolean')) {
                     $fields
                         ->dataFieldByName($fieldName)
-                        ->setSource($source);
+                        ->setSource($source)
+                    ;
                 }
             }
         }
