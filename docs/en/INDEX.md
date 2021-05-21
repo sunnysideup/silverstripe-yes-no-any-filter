@@ -1,17 +1,9 @@
-use like this to fix search
+# To fix ModelAdmin search:
 
-```php
-MyDataObject extends MyDataObject
-{
-    use Sunnysideup\YesNoAnyFilter\FixBooleanSearch;
+This is out of the box
 
 
-}
-```
-
-
-to make summary field colourfull, use this:
-
+# Make summary field colourfull, use this:
 
 
 ```php
