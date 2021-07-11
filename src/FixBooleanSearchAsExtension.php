@@ -1,13 +1,14 @@
 <?php
 
 namespace Sunnysideup\YesNoAnyFilter;
+
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\DataExtension;
 
 class FixBooleanSearchAsExtension extends DataExtension
 {
-
-    public static function source() {
+    public static function source()
+    {
         return [
             null => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.ANYANSWER', '--- any ---'),
             1 => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.YESANSWER', 'Yes'),
@@ -26,8 +27,8 @@ class FixBooleanSearchAsExtension extends DataExtension
                 }
             }
             $labels = $this->owner->fieldLabels(false);
-            foreach($fields as $fieldName => $field) {
-                if(isset($matches[$fieldName])) {
+            foreach (array_keys($fields) as $fieldName) {
+                if (isset($matches[$fieldName])) {
                     $fields[$fieldName]['field'] = DropdownField::create(
                         $fieldName,
                         $labels[$fieldName],
@@ -37,9 +38,6 @@ class FixBooleanSearchAsExtension extends DataExtension
             }
         }
 
-
         return $fields;
     }
-
-
 }

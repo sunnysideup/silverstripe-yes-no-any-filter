@@ -4,7 +4,6 @@ namespace Sunnysideup\YesNoAnyFilter;
 
 trait FixBooleanSearch
 {
-
     // see extension!
 
     // public function scaffoldSearchFields($_params = null)
