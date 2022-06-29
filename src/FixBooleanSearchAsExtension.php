@@ -26,6 +26,7 @@ class FixBooleanSearchAsExtension extends DataExtension
                     $matches[$fieldName] = $fieldName;
                 }
             }
+
             $labels = $this->owner->fieldLabels(false);
             foreach (array_keys($fields) as $fieldName) {
                 if (isset($matches[$fieldName])) {
