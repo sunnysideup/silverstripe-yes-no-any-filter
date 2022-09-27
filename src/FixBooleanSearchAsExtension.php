@@ -19,7 +19,7 @@ class FixBooleanSearchAsExtension extends DataExtension
     public function updateSearchableFields(&$fields)
     {
         $matches = [];
-        $candidates = $this->owner->stat('db');
+        $candidates = $this->owner->config()->get('db');
         if (count($candidates) > 0) {
             foreach ($candidates as $fieldName => $type) {
                 if (0 === stripos($type, 'Boolean')) {
