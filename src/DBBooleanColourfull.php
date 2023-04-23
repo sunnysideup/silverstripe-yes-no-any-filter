@@ -5,6 +5,11 @@ namespace Sunnysideup\YesNoAnyFilter;
 use SilverStripe\Core\Extension;
 use SilverStripe\ORM\FieldType\DBField;
 
+/**
+ * Class \Sunnysideup\YesNoAnyFilter\DBBooleanColourfull
+ *
+ * @property DBBoolean|DBBooleanColourfull $owner
+ */
 class DBBooleanColourfull extends Extension
 {
     //colours from CMS

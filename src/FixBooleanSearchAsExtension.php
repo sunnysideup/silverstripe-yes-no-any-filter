@@ -5,6 +5,11 @@ namespace Sunnysideup\YesNoAnyFilter;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\DataExtension;
 
+/**
+ * Class \Sunnysideup\YesNoAnyFilter\FixBooleanSearchAsExtension
+ *
+ * @property DataObject|FixBooleanSearchAsExtension $owner
+ */
 class FixBooleanSearchAsExtension extends DataExtension
 {
     public static function source()
