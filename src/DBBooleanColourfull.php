@@ -8,7 +8,7 @@ use SilverStripe\ORM\FieldType\DBField;
 /**
  * Class \Sunnysideup\YesNoAnyFilter\DBBooleanColourfull
  *
- * @property DBBoolean|DBBooleanColourfull $owner
+ * @property \SilverStripe\ORM\FieldType\DBBoolean|\Sunnysideup\YesNoAnyFilter\DBBooleanColourfull $owner
  */
 class DBBooleanColourfull extends Extension
 {
