@@ -6,7 +6,7 @@ use SilverStripe\Core\Extension;
 use SilverStripe\ORM\FieldType\DBField;
 
 /**
- * Class \Sunnysideup\YesNoAnyFilter\DBBooleanColourfull
+ * Class \Sunnysideup\YesNoAnyFilter\DBBooleanColourfull.
  *
  * @property \SilverStripe\ORM\FieldType\DBBoolean|\Sunnysideup\YesNoAnyFilter\DBBooleanColourfull $owner
  */

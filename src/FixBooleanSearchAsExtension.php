@@ -6,7 +6,7 @@ use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\DataExtension;
 
 /**
- * Class \Sunnysideup\YesNoAnyFilter\FixBooleanSearchAsExtension
+ * Class \Sunnysideup\YesNoAnyFilter\FixBooleanSearchAsExtension.
  *
  * @property \SilverStripe\ORM\DataObject|\Sunnysideup\YesNoAnyFilter\FixBooleanSearchAsExtension $owner
  */
