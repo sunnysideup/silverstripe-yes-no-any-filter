@@ -12,7 +12,7 @@ use SilverStripe\ORM\DataExtension;
  */
 class FixBooleanSearchAsExtension extends DataExtension
 {
-    public static function source()
+    public static function dropdown_source_for_boolean_fields()
     {
         return [
             null => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.ANYANSWER', '--- any ---'),
@@ -38,7 +38,7 @@ class FixBooleanSearchAsExtension extends DataExtension
                     $fields[$fieldName]['field'] = DropdownField::create(
                         $fieldName,
                         $labels[$fieldName],
-                        self::source()
+                        self::dropdown_source_for_boolean_fields()
                     );
                 }
             }
