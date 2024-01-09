@@ -55,7 +55,8 @@ class DBBooleanColourfull extends Extension
 
     protected function NiceAndColourfullInner(?bool $invertColours = false)
     {
-        if ($this->owner->value) {
+        $v = (bool) $this->owner->getValue();
+        if ($v) {
             $bgColour = $invertColours ? self::BAD_COLOUR : self::GOOD_COLOUR;
             $text = self::YES_VALUE;
         } else {
