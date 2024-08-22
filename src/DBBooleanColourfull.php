@@ -64,6 +64,6 @@ class DBBooleanColourfull extends Extension
             $text = self::NO_VALUE;
         }
 
-        return DBField::create_field('HTMLFragment', '<div class="boolean-nice-and-colourfull" style="background-color: ' . $bgColour . '; ' . self::STYLE . ' ">' . $text . '</div>');
+        return DBField::create_field('HTMLFragment', '<span class="boolean-nice-and-colourfull" style="display: block; background-color: ' . $bgColour . '; ' . self::STYLE . ' ">' . $text . '</span>');
     }
 }
