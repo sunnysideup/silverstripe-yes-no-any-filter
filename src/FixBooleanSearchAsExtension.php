@@ -8,7 +8,7 @@ use SilverStripe\ORM\DataExtension;
 /**
  * Class \Sunnysideup\YesNoAnyFilter\FixBooleanSearchAsExtension.
  *
- * @property \SilverStripe\ORM\DataObject|\Sunnysideup\YesNoAnyFilter\FixBooleanSearchAsExtension $owner
+ * @property DataObject|FixBooleanSearchAsExtension $owner
  */
 class FixBooleanSearchAsExtension extends DataExtension
 {
