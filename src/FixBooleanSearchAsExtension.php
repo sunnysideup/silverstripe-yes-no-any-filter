@@ -8,14 +8,14 @@ use SilverStripe\ORM\DataExtension;
 /**
  * Class \Sunnysideup\YesNoAnyFilter\FixBooleanSearchAsExtension.
  *
- * @property DataObject|FixBooleanSearchAsExtension $owner
+ * @property DataObject $owner
  */
 class FixBooleanSearchAsExtension extends DataExtension
 {
     public static function dropdown_source_for_boolean_fields()
     {
         return [
-            null => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.ANYANSWER', '--- any ---'),
+            null => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.ANYANSWER', '(Any)'),
             1 => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.YESANSWER', 'Yes'),
             0 => _t('SilverStripe\\ORM\\FieldType\\DBBoolean.NOANSWER', 'No'),
         ];
