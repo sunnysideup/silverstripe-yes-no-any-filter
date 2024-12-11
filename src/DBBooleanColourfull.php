@@ -3,6 +3,7 @@
 namespace Sunnysideup\YesNoAnyFilter;
 
 use SilverStripe\Core\Extension;
+use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\ORM\FieldType\DBField;
 
 /**
@@ -55,6 +56,8 @@ class DBBooleanColourfull extends Extension
 
     protected function NiceAndColourfullInner(?bool $invertColours = false)
     {
+        /** @var DBBoolean $owner */
+        $owner = $this->getOwner();
         $v = (bool) $this->owner->getValue();
         if ($v) {
             $bgColour = $invertColours ? self::BAD_COLOUR : self::GOOD_COLOUR;
