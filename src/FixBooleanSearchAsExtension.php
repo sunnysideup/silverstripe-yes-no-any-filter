@@ -3,14 +3,14 @@
 namespace Sunnysideup\YesNoAnyFilter;
 
 use SilverStripe\Forms\DropdownField;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 
 /**
  * Class \Sunnysideup\YesNoAnyFilter\FixBooleanSearchAsExtension.
  *
  * @property DataObject|FixBooleanSearchAsExtension $owner
  */
-class FixBooleanSearchAsExtension extends DataExtension
+class FixBooleanSearchAsExtension extends Extension
 {
     public static function dropdown_source_for_boolean_fields()
     {
