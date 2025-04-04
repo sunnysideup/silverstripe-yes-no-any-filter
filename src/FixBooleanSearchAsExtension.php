@@ -24,7 +24,8 @@ class FixBooleanSearchAsExtension extends Extension
     public function updateSearchableFields(&$fields)
     {
         $matches = [];
-        $candidates = $this->owner->config()->get('db');
+        $owner = $this->getOwner();
+        $candidates = $owner->config()->get('db');
         if (count($candidates) > 0) {
             foreach ($candidates as $fieldName => $type) {
                 if (0 === stripos($type, 'Boolean')) {
@@ -32,7 +33,7 @@ class FixBooleanSearchAsExtension extends Extension
                 }
             }
 
-            $labels = $this->owner->fieldLabels(false);
+            $labels = $owner->fieldLabels(false);
             foreach (array_keys($fields) as $fieldName) {
                 if (isset($matches[$fieldName])) {
                     $fields[$fieldName]['field'] = DropdownField::create(

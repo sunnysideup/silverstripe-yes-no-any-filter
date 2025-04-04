@@ -58,7 +58,7 @@ class DBBooleanColourfull extends Extension
     {
         /** @var DBBoolean $owner */
         $owner = $this->getOwner();
-        $v = (bool) $this->owner->getValue();
+        $v = (bool) $owner->getValue();
         if ($v) {
             $bgColour = $invertColours ? self::BAD_COLOUR : self::GOOD_COLOUR;
             $text = self::YES_VALUE;
