@@ -4,6 +4,7 @@ namespace Sunnysideup\YesNoAnyFilter;
 
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Core\Extension;
+use SilverStripe\ORM\DataObject;
 
 /**
  * Class \Sunnysideup\YesNoAnyFilter\FixBooleanSearchAsExtension.
