@@ -2,8 +2,8 @@
 
 namespace Sunnysideup\YesNoAnyFilter;
 
-use SilverStripe\Forms\DropdownField;
 use SilverStripe\Core\Extension;
+use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\DataObject;
 
 /**
