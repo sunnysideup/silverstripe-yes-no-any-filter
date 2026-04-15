@@ -29,7 +29,7 @@ class FixBooleanSearchAsExtension extends Extension
         $candidates = $owner->config()->get('db');
         if (count($candidates) > 0) {
             foreach ($candidates as $fieldName => $type) {
-                if (0 === stripos($type, 'Boolean')) {
+                if (0 === stripos((string) $type, 'Boolean')) {
                     $matches[$fieldName] = $fieldName;
                 }
             }
