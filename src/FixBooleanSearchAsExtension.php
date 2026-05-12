@@ -39,7 +39,7 @@ class FixBooleanSearchAsExtension extends Extension
                 if (isset($matches[$fieldName])) {
                     $fields[$fieldName]['field'] = DropdownField::create(
                         $fieldName,
-                        $labels[$fieldName],
+                        $labels[$fieldName] ?? $fieldName,
                         self::dropdown_source_for_boolean_fields()
                     );
                 }
